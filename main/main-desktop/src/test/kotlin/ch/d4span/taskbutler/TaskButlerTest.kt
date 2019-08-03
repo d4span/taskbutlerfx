@@ -12,4 +12,8 @@ class TaskButlerTest {
     @Test
     fun contextLoads() {
     }
+
+    @Test
+    fun isMainWindowVisible() {
+    }
 }
