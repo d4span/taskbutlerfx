@@ -1,22 +1,27 @@
 package ch.d4span.taskbutler
 
-import javafx.application.Application
 import javafx.application.Platform
-import javafx.stage.Stage
 import org.springframework.boot.SpringApplication
 import org.springframework.boot.autoconfigure.SpringBootApplication
-import javafx.scene.layout.StackPane
-import javafx.scene.Scene
-import javafx.scene.control.Label
 
 
+/**
+ * The core Spring Boot application, responsible for proper application startup.
+ */
 @SpringBootApplication
 open class TaskButler {
     init {
-        Platform.startup { }
+        // Ensure that OpenJFX has been properly initialized.
+        try {
+            Platform.startup { }
+        } catch (e: IllegalStateException) {
+        }
     }
 }
 
+/**
+ * Application entry point.
+ */
 fun main(args: Array<String>) {
     SpringApplication.run(TaskButler::class.java, *args)
 }
