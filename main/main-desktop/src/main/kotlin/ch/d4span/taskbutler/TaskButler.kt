@@ -11,18 +11,12 @@ import javafx.scene.control.Label
 
 
 @SpringBootApplication
-open class TaskButler : Application() {
-    override fun start(stage: Stage?) {
-        val javaVersion = System.getProperty("java.version")
-        val javafxVersion = System.getProperty("javafx.version")
-        val l = Label("Hello, JavaFX $javafxVersion, running on Java $javaVersion.")
-        val scene = Scene(StackPane(l), 640.0, 480.0)
-        stage?.setScene(scene)
-        stage?.show()
+open class TaskButler {
+    init {
+        Platform.startup { }
     }
 }
 
 fun main(args: Array<String>) {
     SpringApplication.run(TaskButler::class.java, *args)
-    Application.launch(TaskButler::class.java)
 }

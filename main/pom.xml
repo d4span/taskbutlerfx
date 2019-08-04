@@ -16,4 +16,13 @@
     <modules>
         <module>main-desktop</module>
     </modules>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.jetbrains.kotlin</groupId>
+            <artifactId>kotlin-test-junit5</artifactId>
+            <version>${kotlin-test.version}</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
 </project>

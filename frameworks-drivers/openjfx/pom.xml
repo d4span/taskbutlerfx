@@ -12,5 +12,15 @@
 
     <artifactId>openjfx</artifactId>
 
+    <dependencies>
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-controls</artifactId>
+            <version>${openjfx.version}</version>
+        </dependency>
+    </dependencies>
 
+    <properties>
+        <openjfx.version>12.0.2</openjfx.version>
+    </properties>
 </project>
